@@ -93,6 +93,11 @@
 
     <section id="github-projects">
         <h2> My GitHub Repositories</h2>
+        <label for="repository-sort">Sort repositories:</label>
+        <select id="repository-sort">
+            <option value="desc">Newest first</option>
+            <option value="asc">Oldest first</option>
+        </select>
         <p id="github-status" aria-live="polite">Loading repositories...</p>
         <div id="github-repositories" class="projects-container"></div>
     </section>

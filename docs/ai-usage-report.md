@@ -35,6 +35,9 @@ ChatGPT (GPT-6) was the only AI tool I used for the work described below. I used
 | ChatGPT (GPT-6 Luna) | 2026-11-20 | A02: Suggested a GitHub API endpoint and explained how to check its response. | Browser only; no source file | I opened the endpoint and saw information about my repositories. |
 | ChatGPT (GPT-6 Luna) | 2026-11-20 | A03: Suggested a small GitHub API request to fetch repositories and display the result count. | js/script.js — code snippet suggested in chat | I added the request and confirmed the page displayed “3 repositories loaded.” |
 | ChatGPT (GPT-6 Luna) | 2026-11-20 | A04: Suggested JavaScript to display GitHub API results as repository cards. | index.html and js/script.js — repository-results container and card creation | I added the code and confirmed that the repository cards appear. |
+| ChatGPT (GPT-6 Luna) | 2026-11-20 | A05: Suggested a Newest first / Oldest first menu for the GitHub repositories. | index.html — sort menu snippet | I added the menu and confirmed it appears above the repository cards. |
+| ChatGPT (GPT-6 Luna) | 2026-11-20 | A06: Helped debug the GitHub repository loading and sorting code. | js/script.js — GitHub API request and card-rendering section | I corrected the fetch structure and tested that the repository cards and sort menu work. |
+| ChatGPT (GPT-6 Luna) | 2026-11-20 | A07: Suggested saving and restoring the selected theme with localStorage. | js/script.js — theme initialization and toggle handler | I added the storage logic and checked that my theme choice remains after refreshing the page. |
 
 ## Learning and Review
 

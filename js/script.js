@@ -4,13 +4,21 @@ const projectCards= document.querySelectorAll(".project-card");
 const contactForm= document.querySelector("#contact-form");
 const formStatus= document.querySelector("#form-status");
 
+if (localStorage.getItem("theme") === "dark") {
+    document.body.classList.add("dark-mode");
+    themeButton.textContent = "Light Mode";
+}
+
 window.addEventListener("load", function () {
     window.scrollTo(0, 0);
 });
 
 themeButton.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
-
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark-mode") ? "dark" : "light"
+    );
     if (document.body.classList.contains("dark-mode")) {
         themeButton.textContent = "Light Mode";
     } else {
@@ -39,43 +47,56 @@ contactForm.reset();
 
 const githubStatus = document.querySelector("#github-status");
 const githubRepositories = document.querySelector("#github-repositories");
-const repositoriesUrl = "https://api.github.com/users/Layan-Alshanbari/repos?sort=updated&per_page=5";
+const repositorySort = document.querySelector("#repository-sort");
 
-fetch(repositoriesUrl)
-    .then(function (response) {
-        if (!response.ok) {
-            throw new Error("GitHub request failed");
-        }
-        return response.json();
-    })
-    .then(function (repositories) {
-        githubStatus.textContent =
-            repositories.length + " repositories loaded.";
-        repositories.forEach(function (repository) {
-        githubStatus.hidden = true;
-            const card = document.createElement("article");
-            card.classList.add("project-card");
+function loadRepositories() {
+    const repositoriesUrl =
+        "https://api.github.com/users/Layan-Alshanbari/repos?sort=created&direction=" +
+        repositorySort.value +
+        "&per_page=5";
 
-            const title = document.createElement("h3");
-            title.textContent = repository.name;
+    githubRepositories.replaceChildren();
+    githubStatus.hidden = false;
+    githubStatus.textContent = "Loading repositories...";
 
-            const description = document.createElement("p");
-            description.textContent =
-                repository.description || "No description provided.";
+    fetch(repositoriesUrl)
+        .then(function (response) {
+            if (!response.ok) {
+                throw new Error("GitHub request failed");
+            }
+            return response.json();
+        })
+        .then(function (repositories) {
+            repositories.forEach(function (repository) {
+                const card = document.createElement("article");
+                card.classList.add("project-card");
 
-            const language = document.createElement("p");
-            language.textContent =
-                "Language: " + (repository.language || "Not specified");
+                const title = document.createElement("h3");
+                title.textContent = repository.name;
 
-            const link = document.createElement("a");
-            link.href = repository.html_url;
-            link.textContent = "View repository";
+                const description = document.createElement("p");
+                description.textContent =
+                    repository.description || "No description provided.";
 
-            card.append(title, description, language, link);
-            githubRepositories.append(card);
+                const language = document.createElement("p");
+                language.textContent =
+                    "Language: " + (repository.language || "Not specified");
+
+                const link = document.createElement("a");
+                link.href = repository.html_url;
+                link.textContent = "View repository";
+
+                card.append(title, description, language, link);
+                githubRepositories.append(card);
+            });
+
+            githubStatus.hidden = true;
+        })
+        .catch(function () {
+            githubStatus.textContent =
+                "Could not load repositories right now.";
         });
-    })
-    .catch(function () {
-        githubStatus.textContent =
-            "Could not load repositories right now.";
-    });
+}
+
+repositorySort.addEventListener("change", loadRepositories);
+loadRepositories();
