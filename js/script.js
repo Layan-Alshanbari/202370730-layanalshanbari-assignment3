@@ -36,3 +36,46 @@ event.preventDefault();
 formStatus.textContent= "Thanks! The form is valid Have a great day.";
 contactForm.reset();
 });
+
+const githubStatus = document.querySelector("#github-status");
+const githubRepositories = document.querySelector("#github-repositories");
+const repositoriesUrl = "https://api.github.com/users/Layan-Alshanbari/repos?sort=updated&per_page=5";
+
+fetch(repositoriesUrl)
+    .then(function (response) {
+        if (!response.ok) {
+            throw new Error("GitHub request failed");
+        }
+        return response.json();
+    })
+    .then(function (repositories) {
+        githubStatus.textContent =
+            repositories.length + " repositories loaded.";
+        repositories.forEach(function (repository) {
+        githubStatus.hidden = true;
+            const card = document.createElement("article");
+            card.classList.add("project-card");
+
+            const title = document.createElement("h3");
+            title.textContent = repository.name;
+
+            const description = document.createElement("p");
+            description.textContent =
+                repository.description || "No description provided.";
+
+            const language = document.createElement("p");
+            language.textContent =
+                "Language: " + (repository.language || "Not specified");
+
+            const link = document.createElement("a");
+            link.href = repository.html_url;
+            link.textContent = "View repository";
+
+            card.append(title, description, language, link);
+            githubRepositories.append(card);
+        });
+    })
+    .catch(function () {
+        githubStatus.textContent =
+            "Could not load repositories right now.";
+    });

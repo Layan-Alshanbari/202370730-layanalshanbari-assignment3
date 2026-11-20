@@ -186,3 +186,6 @@ body.dark-mode textarea {
     background-color: #111827;
     border-color: #0014C4;
 }
+#github-repositories {
+    grid-template-columns: 1fr;
+}
