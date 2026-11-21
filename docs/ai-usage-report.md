@@ -39,6 +39,8 @@ ChatGPT (GPT-6) was the only AI tool I used for the work described below. I used
 | ChatGPT (GPT-6 Luna) | 2026-11-20 | A06: Helped debug the GitHub repository loading and sorting code. | js/script.js — GitHub API request and card-rendering section | I corrected the fetch structure and tested that the repository cards and sort menu work. |
 | ChatGPT (GPT-6 Luna) | 2026-11-20 | A07: Suggested saving and restoring the selected theme with localStorage. | js/script.js — theme initialization and toggle handler | I added the storage logic and checked that my theme choice remains after refreshing the page. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A08: Interpreted PageSpeed Insights results and suggested how to document them. | docs/technical-documentation.md — draft text in chat; no file edited | I shared the test results. I will record the test date and device before adding the results to the document. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A09: Suggested Assignment 3 README wording for the title, description, and features. | README.md — draft text in chat | I updated the README title, project description, and feature list. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A10: Suggested README instructions for viewing the live site or running it locally. | README.md — draft text in chat | I added the live-site link and local-server steps. |
 
 ## Learning and Review
 
