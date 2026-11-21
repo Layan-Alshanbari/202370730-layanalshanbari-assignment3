@@ -41,6 +41,10 @@ ChatGPT (GPT-6) was the only AI tool I used for the work described below. I used
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A08: Interpreted PageSpeed Insights results and suggested how to document them. | docs/technical-documentation.md — draft text in chat; no file edited | I shared the test results. I will record the test date and device before adding the results to the document. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A09: Suggested Assignment 3 README wording for the title, description, and features. | README.md — draft text in chat | I updated the README title, project description, and feature list. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A10: Suggested README instructions for viewing the live site or running it locally. | README.md — draft text in chat | I added the live-site link and local-server steps. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A11: Reviewed the Assignment 3 README and identified Markdown link formatting corrections. | README.md — corrected link syntax suggested in chat | I reviewed the README; I still need to fix the live-site, local-server, and AI-report links. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A12: Suggested detailed sections describing the GitHub API, repository sorting, project filters, saved theme, and contact form. | docs/technical-documentation.md — draft text in chat | I have not yet added or checked these sections against my code. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A14: Revised the Project Overview to include Assignment 3 features while keeping its original format. | docs/technical-documentation.md — suggested paragraph in chat | I requested the revised paragraph; I have not yet confirmed adding it to the document. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A16: Suggested updates to make the technical documentation accurate for Assignment 3. | docs/technical-documentation.md — edits based on chat suggestions | I updated the code description, testing notes, date, code fence, and limitations. |
 
 ## Learning and Review
 
