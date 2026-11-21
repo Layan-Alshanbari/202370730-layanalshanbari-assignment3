@@ -49,7 +49,7 @@ filterButtons.forEach(function (button){
 // Show confirmation after the browser accepts the form fields.
 contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
-      formStatus.textContent= "Thanks! Your form is valid. This demo does not send messages.";
+      formStatus.textContent= "Thanks! Your form is valid.";
       contactForm.reset();
 });
 
