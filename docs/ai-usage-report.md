@@ -1,8 +1,8 @@
-# AI Usage Report — Assignment 2
+# AI Usage Report — Assignment 3
 
-## Tool Used
+## Tools Used & Use Cases
 
-ChatGPT (GPT-6) was the only AI tool I used for the work described below. I used it as a tutor and coding assistant. I implemented and tested the changes in my Assignment 1 project.
+ChatGPT was the only AI tool I used for Assignment 3. I used ChatGPT (GPT-6 Luna) as a tutor and coding assistant to understand the requirements, add and debug the GitHub API feature, sort repositories, save the theme preference, and improve the documentation. I adapted the suggestions and tested the features in my Assignment 3 repository, which builds on my Assignment 2 project. AI assistance for code carried forward from Assignment 2 is identified in the usage log.
 
 ## Usage Log
 
@@ -44,11 +44,21 @@ ChatGPT (GPT-6) was the only AI tool I used for the work described below. I used
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A11: Reviewed the Assignment 3 README and identified Markdown link formatting corrections. | README.md — corrected link syntax suggested in chat | I reviewed the README; I still need to fix the live-site, local-server, and AI-report links. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A12: Suggested detailed sections describing the GitHub API, repository sorting, project filters, saved theme, and contact form. | docs/technical-documentation.md — draft text in chat | I have not yet added or checked these sections against my code. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A14: Revised the Project Overview to include Assignment 3 features while keeping its original format. | docs/technical-documentation.md — suggested paragraph in chat | I requested the revised paragraph; I have not yet confirmed adding it to the document. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A15: Reviewed the updated technical documentation and identified remaining accuracy and formatting fixes. | docs/technical-documentation.md — corrections suggested in chat | I updated the document; the listed corrections still need to be checked and applied. |
 | ChatGPT (GPT-6 Luna) | 2026-11-21 | A16: Suggested updates to make the technical documentation accurate for Assignment 3. | docs/technical-documentation.md — edits based on chat suggestions | I updated the code description, testing notes, date, code fence, and limitations. |
+| ChatGPT (GPT-6 Luna) | 2026-11-21 | A17: Reviewed the AI Usage Report and suggested Assignment 3 updates based on the instructor’s feedback. | docs/ai-usage-report.md — suggestions in chat; no file edited | I have not yet applied these suggestions. |
 
 ## Learning and Review
 
 ChatGPT explained the code suggestions so I could understand them. I tested the project filters, form behavior, colors, and narrow-screen layout. The contact form shows browser validation and a confirmation message; it is a demo and does not send messages.
+
+## Benefits
+
+Using ChatGPT as a tutor helped me break the work into smaller steps. Its explanations helped me understand how the GitHub API response is fetched and displayed, how the repository sort menu works, and how `localStorage` remembers the theme. I tested the changes in the browser as I added them.
+
+## Challenges
+
+Some code needed careful placement and debugging. When I first added repository sorting, the repositories disappeared because the `fetch()` call and its `.then()` chain were not connected correctly. Debugging this helped me understand that the request must run inside the loading function. PageSpeed Insights also showed unscored suggestions alongside 100 scores, so I had to distinguish optional suggestions from score problems.
 
 ## Declaration
 
@@ -56,5 +66,5 @@ I declare that this report and the attached evidence document all of my AI use i
 
 Name: Layan Alshanbari  
 Student ID: 202370730  
-Date: 2026-10-19  
-Signature: Layan
+Date: 2026-10-21  
+Signature: Layan Alshanbari
