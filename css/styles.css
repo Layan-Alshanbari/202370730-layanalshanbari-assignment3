@@ -1,3 +1,4 @@
+/* Include padding and borders inside each element's declared size. */
 * {
     box-sizing: border-box;
 }
@@ -138,7 +139,7 @@ footer {
 }
 
 /* Tablet and desktop */
-
+/* The shared project grid becomes two columns on wider screens. */
 @media (min-width: 768px) {
     .projects-container {
         grid-template-columns: 1fr 1fr;
@@ -146,7 +147,7 @@ footer {
 }
 
 /* Dark mode */
-
+/* JavaScript adds .dark-mode to body; these rules override the light colors. */
 body.dark-mode {
     color: #F8FAFC;
     background-color: #000000;
@@ -186,6 +187,7 @@ body.dark-mode textarea {
     background-color: #111827;
     border-color: #0014C4;
 }
+/* Keep API repository cards stacked, even when the shared grid becomes two columns. */
 #github-repositories {
     grid-template-columns: 1fr;
 }

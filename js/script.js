@@ -3,16 +3,22 @@ const filterButtons= document.querySelectorAll("[data-filter]");
 const projectCards= document.querySelectorAll(".project-card");
 const contactForm= document.querySelector("#contact-form");
 const formStatus= document.querySelector("#form-status");
+const githubStatus = document.querySelector("#github-status");
+const githubRepositories = document.querySelector("#github-repositories");
+const repositorySort = document.querySelector("#repository-sort");
+
 
 if (localStorage.getItem("theme") === "dark") {
     document.body.classList.add("dark-mode");
     themeButton.textContent = "Light Mode";
 }
 
+// Return to the top when the page loads.
 window.addEventListener("load", function () {
     window.scrollTo(0, 0);
 });
 
+// Restore the theme saved from the visitor's previous visit.
 themeButton.addEventListener("click", function () {
     document.body.classList.toggle("dark-mode");
     localStorage.setItem(
@@ -26,29 +32,28 @@ themeButton.addEventListener("click", function () {
     }
 });
 
+// Filter the portfolio project cards by category.
 filterButtons.forEach(function (button){
-button.addEventListener("click", function(){
-const selectedCategory= button.dataset.filter;
-projectCards.forEach(function (card){
-if(selectedCategory === "all" || card.dataset.category === selectedCategory){
-card.hidden= false;
-} else{
-card.hidden= true;
-}
-})
-})
+     button.addEventListener("click", function(){
+           const selectedCategory= button.dataset.filter;
+           projectCards.forEach(function (card){
+           if(selectedCategory === "all" || card.dataset.category === selectedCategory){
+                 card.hidden= false;
+          } else{
+                   card.hidden= true;
+                   }
+         })
+    })
 });
 
+// Show confirmation after the browser accepts the form fields.
 contactForm.addEventListener("submit", function (event) {
-event.preventDefault();
-formStatus.textContent= "Thanks! The form is valid Have a great day.";
-contactForm.reset();
+      event.preventDefault();
+      formStatus.textContent= "Thanks! Your form is valid. This demo does not send messages.";
+      contactForm.reset();
 });
 
-const githubStatus = document.querySelector("#github-status");
-const githubRepositories = document.querySelector("#github-repositories");
-const repositorySort = document.querySelector("#repository-sort");
-
+// Fetch and display public GitHub repositories.
 function loadRepositories() {
     const repositoriesUrl =
         "https://api.github.com/users/Layan-Alshanbari/repos?sort=created&direction=" +

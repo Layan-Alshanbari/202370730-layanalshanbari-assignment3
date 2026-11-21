@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta
-            name="description"
-            content="The personal portfolio of Layan Alshanbari, a student and beginner web developer."
-    >
+    <meta name="description"  content="The personal portfolio of Layan Alshanbari, a student and beginner web developer.">
 
     <title>Layan Alshanbari | Personal Portfolio</title>
 
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+
 </head>
 
 <body>
@@ -55,6 +52,7 @@
 
     <section id="projects">
         <h2>My Projects</h2>
+        <!-- Each filter value must match a project's data-category value. -->
         <div class="project-filters">
             <button type="button" data-filter="all">All</button>
             <button type="button" data-filter="swe">SWE Projects</button>
@@ -63,10 +61,7 @@
 
         <div class="projects-container">
             <article class="project-card" data-category="swe">
-                <img
-                        src="assets/images/project-1.svg"
-                        alt="Illustration of the KFUPM Events App"
-                >
+                <img src="assets/images/project-1.svg"  alt="Illustration of the KFUPM Events App">
 
                 <h3>KFUPM Events App</h3>
 
@@ -76,10 +71,7 @@
             </article>
 
             <article class="project-card" data-category="coe">
-                <img
-                        src="assets/images/project-2.svg"
-                        alt="Illustration of the Smart Traffic Light project"
-                >
+                <img src="assets/images/project-2.svg"  alt="Illustration of the Smart Traffic Light project">
 
                 <h3>Smart traffic light</h3>
 
@@ -99,11 +91,12 @@
             <option value="asc">Oldest first</option>
         </select>
         <p id="github-status" aria-live="polite">Loading repositories...</p>
+        <!-- script.js loads GitHub repository cards into this container. -->
         <div id="github-repositories" class="projects-container"></div>
     </section>
     <section id="contact">
         <h2>Contact Me</h2>
-
+        <!-- This demo validates the fields and shows feedback; it does not send messages. -->
         <form id="contact-form">
             <div>
                 <label for="name">Name</label>
