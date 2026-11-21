@@ -52,6 +52,23 @@ The website has been tested in Safari using a mobile-sized browser window and la
 
 Before submission, it will also be tested at tablet and desktop sizes. The navigation links, dark mode, form validation, images, and browser console will be checked.
 
+## Performance Testing
+
+- Tool: Google PageSpeed Insights
+- Test date: 2026/ 11/ 20
+- Device: Mobile and Desktop
+- URL: https://layan-alshanbari.github.io/202370730-layanalshanbari-assignment3/
+- Performance: 100
+- Accessibility: 100
+- Best Practices: 100
+- SEO: 100
+- First Contentful Paint: 0.2 s
+- Largest Contentful Paint: 0.2 s
+- Total Blocking Time: 0 ms
+- Cumulative Layout Shift: 0.002
+- Speed Index: 0.2 s
+- Findings: PageSpeed listed LCP, caching, and render-blocking suggestions as unscored. No code changes were made based on these suggestions because the site already received a 100 performance score.
+
 ## Known Limitations
 
 The contact form does not send information because the assignment does not require a backend. The selected theme also resets when the webpage is refreshed.
